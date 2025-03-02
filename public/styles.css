@@ -1,0 +1,165 @@
+/* Reset and Global Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: #1a252f;
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-bottom: 4px solid #3498db;
+}
+
+/* header .logo h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+} */
+
+/* Main Content Styling */
+main {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.intro h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1a252f;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Form Section Styling */
+.form-section {
+    padding: 30px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 35px;
+}
+
+.form-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #1a252f;
+}
+
+.logo h1 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 10px;
+    font-size: 3rem;
+}
+.a {
+    letter-spacing: 2px;
+}
+
+.ai {
+    color: #e06666;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+    color: #444;
+}
+
+textarea, select {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1.1rem;
+    background: #f8f9fa;
+    transition: 0.3s;
+}
+
+textarea:focus, select:focus {
+    border-color: #3498db;
+    outline: none;
+    background: #fff;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #217dbb;
+    transform: scale(1.02);
+}
+
+/* Result Section Styling */
+.result-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.priority-result {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    display: inline-block;
+    font-weight: 600;
+    color: #1a252f;
+    border-left: 6px solid #3498db;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #1a252f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-top: 4px solid #3498db;
+}

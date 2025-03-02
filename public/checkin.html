@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Powered Medical Waitlist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>W<span class="ai"><span class="a">A</span>I</span>TLIST</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Welcome to HenHacks Medical Offices</h2>
+            <p>Enter your symptoms below and let our AI prioritize your case based on urgency.</p>
+        </section>
+        <section class="form-section">
+            <h3></h3>
+            <form id="symptom-form">
+                <label for="first-name">First Name:</label>
+                <textarea id="first-name" name="first-name" rows="1" placeholder="John" required></textarea>
+                
+                <label for="last-name">Last Name:</label>
+                <textarea id="last-name" name="last-name" rows="1" placeholder="Doe" required></textarea>
+                
+                <label for="symptoms">Describe your symptoms:</label>
+                <textarea id="symptoms" name="symptoms" rows="5" placeholder="e.g. Fever, headache, shortness of breath..." required></textarea>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </section>
+
+        <script>
+            /*
+            * Handles form submission and sends patient data to the AI-powered backend.
+            */
+            document.getElementById("symptom-form").addEventListener("submit", async function (event) {
+                event.preventDefault(); // Prevent page refresh
+            
+                const firstName = document.getElementById("first-name").value; // Get first name input
+                const lastName = document.getElementById("last-name").value; // Get last name input
+                const symptoms = document.getElementById("symptoms").value; // Get symptoms input
+            
+                try {
+                    const response = await fetch("http://localhost:3000/prompt", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ firstName: firstName, lastName: lastName, symptoms: symptoms }) // Send as JSON
+                    });
+            
+                    const data = await response.json(); // Parse JSON response
+                    console.log("Response from server:", data);
+            
+                    // Update the priority-result div with the response
+                    document.getElementById("priority-result").innerText = data.position || "No priority status received.";
+                } catch (error) {
+                    console.error("Error fetching data:", error);
+                    document.getElementById("priority-result").innerText = "An error occurred. Please try again.";
+                }
+            });
+            </script>
+
+        <section class="result-section">
+            <h3>Spot on Waitlist:</h3>
+            <div id="priority-result" class="priority-result"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HenHacks Project. Williams, Benz & Padrone. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
