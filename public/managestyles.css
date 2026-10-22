@@ -85,3 +85,36 @@ td {
         font-size: 0.9rem;
     }
 }
+
+/* Severity review and override */
+tr.needs-review {
+    background-color: #fff4e5;
+}
+
+.badge {
+    display: block;
+    margin-top: 6px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.review-badge {
+    background-color: #e67e22;
+    color: white;
+}
+
+.override-badge {
+    background-color: #7f8c8d;
+    color: white;
+}
+
+.override-cell input {
+    width: 70px;
+    padding: 6px;
+}
+
+.override-btn {
+    padding: 6px 12px;
+    margin-bottom: 0;
+}
