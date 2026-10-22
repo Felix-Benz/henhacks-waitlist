@@ -46,6 +46,13 @@ Technologies:
    node index.js
    ```
 
+## Tests
+
+The scoring logic is tested against a fake Gemini model, so no API key or database is needed:
+```
+npm test
+```
+
 ## Reliable AI Triage
 
 An AI score decides when someone sees a doctor, so the app never blindly trusts a single model response. The scoring logic lives in `severity.js`.
